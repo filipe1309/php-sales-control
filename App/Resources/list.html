@@ -1,0 +1,31 @@
+<!--
+// 5 MVC Pattern
+// 5.7 Templates
+// 5.7.2 Replaces with loops
+-->
+
+<div class='panel panel-default' style='margin: 20px;'>
+    <div class='panel-heading'> 
+        <h3 class="panel-title">{{title}}</h3>
+    </div>
+    <div class='panel-body'>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> Code </th>
+                    <th> Name </th>
+                    <th> Address </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for person in people %}
+                    <tr>
+                        <td> {{person.code}} </td>
+                        <td> {{person.name}} </td>
+                        <td> {{person.address}} </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
