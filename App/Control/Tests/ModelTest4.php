@@ -2,7 +2,7 @@
 // 7 Creating an app
 // 7.3 Model Classes
 // 7.3.2 Testing Model Classes
-// 7.3.2.4 Coesion and Responsability
+// 7.3.2.4 Cohesion and Responsability
 
 
 use Book\Control\Page;
