@@ -182,8 +182,9 @@ CREATE TABLE item_sale (
     id integer PRIMARY KEY NOT NULL,
     id_product integer references product(id),
     id_sale integer references sale(id),
-    quantity float
-, price float);
+    quantity float, 
+    price float
+);
 
 
 CREATE TABLE account (
@@ -221,17 +222,17 @@ INSERT INTO person VALUES(23,'Sergio Crespo Pinto','Rua do Sergio Crespo Pinto',
 INSERT INTO person VALUES(24,'Silvio Cesar Cazella','Rua do Silvio Cesar Cazella','Centro','(88) 1234-5678','naoenvie@email.com',18);
 INSERT INTO person VALUES(25,'William Prigol Lopes','Rua do William Prigol Lopes','Centro','(88) 1234-5678','naoenvie@email.com',18);
 
-CREATE TABLE person_group_in (
+CREATE TABLE person_group (
     id integer PRIMARY KEY NOT NULL,
     id_person integer references person(id),
-    id_group_in integer references group_in(id)
+    id_group integer references group_in(id)
 );
-INSERT INTO person_group_in VALUES(13,1,1);
-INSERT INTO person_group_in VALUES(14,1,3);
-INSERT INTO person_group_in VALUES(15,2,3);
-INSERT INTO person_group_in VALUES(16,2,4);
-INSERT INTO person_group_in VALUES(17,3,2);
-INSERT INTO person_group_in VALUES(18,3,4);
+INSERT INTO person_group VALUES(13,1,1);
+INSERT INTO person_group VALUES(14,1,3);
+INSERT INTO person_group VALUES(15,2,3);
+INSERT INTO person_group VALUES(16,2,4);
+INSERT INTO person_group VALUES(17,3,2);
+INSERT INTO person_group VALUES(18,3,4);
 
 INSERT INTO account VALUES(1,1,'2015-04-18','2015-04-20',195.0,'N');
 INSERT INTO account VALUES(2,1,'2015-04-18','2015-05-20',195.0,'N');
