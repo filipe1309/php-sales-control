@@ -173,6 +173,16 @@ class Record {
         }
     }
     
+        /**
+     * Retorna todos objetos
+     */
+    public static function all()
+    {
+        $classname = get_called_class();
+        $rep = new Repository($classname);
+        return $rep->load(new Criteria);
+    }
+    
 }
 
 
