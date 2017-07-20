@@ -35,3 +35,5 @@ class ModelTest3 extends Page {
         }
     }
 }
+
+//https://php-filipe1309.c9users.io/php_oo_3ed/7_chapter/php-sales-control/index.php?class=ModelTest3

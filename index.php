@@ -11,9 +11,10 @@ $libLoader->addNamespace('Book', 'Lib/Book');
 $libLoader->register();
 
 // Application Loader
-require_once 'Lib/Book/Core/ClassLoader.php';
-$appLoader = new Book\Core\ClassLoader;
-$appLoader->addNamespace('Book', 'Lib/Book');
+require_once 'Lib/Book/Core/AppLoader.php';
+$appLoader = new Book\Core\AppLoader;
+$appLoader->addDirectory('App/Control');
+$appLoader->addDirectory('App/Model');
 $appLoader->register();
 
 // Read template content

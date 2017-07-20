@@ -39,7 +39,7 @@ class Record {
     
     public function __get($prop) {
         if (method_exists($this, 'get_' . $prop)) {
-            call_user_func([$this, 'get_' . $prop]);
+            return call_user_func([$this, 'get_' . $prop]);
         } else {
             if (isset($this->data[$prop])) {
                 return $this->data[$prop];

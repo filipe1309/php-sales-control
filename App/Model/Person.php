@@ -70,11 +70,11 @@ class Person extends Record
     
     public function getOpenAccounts()
     {
-        return Conta::getByPerson($this->id);
+        return Account::getByPerson($this->id);
     }
     
     public function totalDebts()
     {
-        return Conta::debtsByPerson($this->id);
+        return Account::debtsByPerson($this->id);
     }
 }
