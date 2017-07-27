@@ -111,9 +111,6 @@ class PeopleForm extends Page {
                 $this->form->setData($person);
                 
                 Transaction::close();
-            } else {
-                die(var_dump('HERE2', $param));
-                
             }
         } catch (Exception $e) {
             new Message('error', '<b>Error</b> ' . $e->getMessage());
