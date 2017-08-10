@@ -42,7 +42,7 @@ class Account extends Record {
         return $total;
     }
     
-    public function generateParcels($id_client, $delay, $value, $parcels) {
+    public static function generateParcels($id_client, $delay, $value, $parcels) {
         $date = DateTime(date('Y-m-d'));
         $date->add(new DateInterval('P' . $delay . 'D'));
         
