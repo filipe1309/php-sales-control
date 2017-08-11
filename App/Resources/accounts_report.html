@@ -1,0 +1,30 @@
+<html>
+    <h2>Accounts in {{date_ini}} and {{date_end}}</h2>
+    <table class="table table-bordered" border="0">
+        <tr bgcolor="#C0C3E8">
+            <td>Emission</td>
+            <td>Expiration</td>
+            <td>Client</td>
+            <td>Value</td>
+            <td>Paid</td>
+        </tr>
+        {% set total = 0 %}
+        {% for account in accounts %}
+            <tr>
+                <td align="center">{{account.dt_emission|date("d/m/Y")}}</td>
+                <td align="center">{{account.dt_expiration|date("d/m/Y")}}</td>
+                <td>{{account.name_client}}</td>
+                <td align="right">{{account.value|number_format(2, ',', '.')}}</td>
+                <td align="center" style="color:{{account.paid == 'S' ? 'green' : 'red'}}">
+                    <b> {{account.paid == 'S' ? 'Yes' : 'No'}} </b>
+                </td>
+            </tr>
+            {% set total = total + account.value %}
+        {% endfor %}
+        <tr bgcolor="whiteSmoke">
+            <td align="center" colspan="3">Total</td>
+            <td align="right">{{total|number_format(2, ',', '.')}}</td>
+            <td></td>
+        </tr>
+    </table>
+</html>
