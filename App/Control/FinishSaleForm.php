@@ -40,7 +40,7 @@ class FinishSaleForm extends Page {
         $parts = new Combo('parts');
         $obs = new Text('obs');
         
-        $parts->addItem([1 => 'One', 2 => 'Two', 3 => 'Three']);
+        $parts->addItems([1 => 'One', 2 => 'Two', 3 => 'Three']);
         $parts->setValue(1);
         
         $discount->onBlur = "$('[name=final_value]').val(Number($('name=value_sale').val()) + Number($('name=additions').val()) - Number($('name=discount').val()) );";
